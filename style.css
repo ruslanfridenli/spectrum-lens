@@ -1,0 +1,24 @@
+:root{--bg:#05070c;--panel:#0d1420;--line:#1c2940;--txt:#dbe7ff;--dim:#6d80a3;--acc:#4dd8ff;--acc2:#b18cff}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--txt);font:14px/1.5 "Segoe UI",system-ui,sans-serif;height:100vh;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-bottom:1px solid var(--line)}
+h1{font-size:18px;letter-spacing:1px}
+.lang button{background:none;border:1px solid var(--line);color:var(--dim);padding:5px 14px;cursor:pointer}
+.lang button.on{background:var(--acc);color:#04202e;border-color:var(--acc);font-weight:600}
+.lang button:first-child{border-radius:7px 0 0 7px}.lang button:last-child{border-radius:0 7px 7px 0}
+main{flex:1;display:flex;min-height:0}
+.stage{flex:1;position:relative;min-width:0}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.start{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(ellipse at center,#0a1220,#05070c)}
+.start .mic{font-size:52px;opacity:.7}
+.start p{color:var(--dim);font-size:12.5px;max-width:380px;text-align:center}
+#go{background:var(--acc);color:#04202e;border-color:var(--acc);font-weight:700;font-size:16px;padding:12px 30px;border-radius:12px;border:1px solid var(--acc);cursor:pointer}
+.panel{width:250px;padding:20px;border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;gap:14px}
+label{display:block;font-size:12px;color:var(--dim)}
+label input[type=range]{width:100%;accent-color:var(--acc);margin-top:6px}
+.check{display:flex;align-items:center;gap:8px}
+.check input{accent-color:var(--acc)}
+.note{margin-top:auto;font-size:13px;color:var(--dim);border-top:1px solid var(--line);padding-top:14px}
+.note b{color:var(--acc);font-family:ui-monospace,monospace;font-size:16px}
+.note span:last-child{font-family:ui-monospace,monospace;color:var(--txt)}
+@media(max-width:800px){.panel{width:200px}}
